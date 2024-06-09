@@ -22,7 +22,7 @@ const Home = () => {
               size="lg"
               className="uppercase flex items-center gap-2 hover:text-primary"
               >
-                <span>Download CV</span>
+                <a href="/assets/Saidil Halim-CV.pdf" download={""}>Download CV</a>
                 <FiDownload className="text-xl"/>
               </Button>
               <div className="mb-8 xl:mb-0">

@@ -44,7 +44,7 @@ const experience = {
     },
     {
       description : "My campus formed a team, one of which was me with my four college friends to work on a project given by a campus partner to improve existing features and add new features on the admin side",
-      position : "SIM-LAB BPJK|Frontend",
+      position : "SIM-LAB BPJK Dashboard",
       year : "2023"
     },
     {

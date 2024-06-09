@@ -13,9 +13,8 @@ const Home = () => {
             <h1 className="h1">
               Hello I'm <br/> <span className="text-accent">Saidil Halim</span>
             </h1><br/>
-            <p className="max-w-[500px] mb-9 text-white/80 xl:text-justify">
-            I excel at crafting elegant digital experiences as a student, and I am proficient in various programming 
-            languages and technologies, with a particular interest in frontend and data science.
+            <p className="max-w-[500px] mb-9 text-white/80 xl:text-justify text-[15px]">
+            I'm a software engineering technology student at Gadjah Mada University. Usually, my role in class projects is as a frontend developer. However, lately, I've been studying data science as well. I enjoy learning data science because it's a real-world application of mathematics. Programming is enjoyable to me because it's like solving puzzles, and when developing websites or working with data, I also find satisfaction in knowing it will be useful to others. I'm proficient in React, Next.js, Node.js, Laravel, MySQL, and Python. I'm currently seeking an internship opportunity.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button

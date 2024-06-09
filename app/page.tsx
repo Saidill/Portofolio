@@ -14,7 +14,7 @@ const Home = () => {
               Hello I'm <br/> <span className="text-accent">Saidil Halim</span>
             </h1><br/>
             <p className="max-w-[500px] mb-9 text-white/80 xl:text-justify text-[14px]">
-            I'm a software engineering technology student at Gadjah Mada University. Usually, my role in class projects is as a frontend developer. However, lately, I've been studying data science as well. I enjoy learning data science because it's a real-world application of mathematics. Programming is enjoyable to me because it's like solving puzzles, and when developing websites or working with data, I also find satisfaction in knowing it will be useful to others. I'm proficient in React, Next.js, Node.js, Laravel, MySQL, and Python. I'm currently seeking an internship opportunity.
+            I am a Software Engineering Technology student at Universitas Gadjah Mada with a strong ability to quickly learn and adapt to new technologies. During my studies, I have specialized in front-end engineering, consistently taking on the role of Front-End Engineer in team projects. I am proficient in React.js, Next.js, Tailwind, and Laravel. Recently, I have developed a keen interest in data science, enjoying its practical applications of mathematical concepts.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button

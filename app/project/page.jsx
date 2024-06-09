@@ -94,15 +94,15 @@ const Work = () => {
               className="xl:h-[450px] mb-12"
               onSlideChange={handleSlideChange}
             >
-              {projects.map((project, index) => {
-                return (
-                  <SwiperSlide key={index} className="flex justify-center items-center">
-                    <Image src={project.image} alt={project.title} width={700} height={500} className="object-contain h-full" />
-                  </SwiperSlide>
-                );
-              })}
-              <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
-              btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+              {projects.map((project, index) => (
+                <SwiperSlide key={index} className="flex justify-center items-center">
+                  <Image src={project.image} alt={project.title} width={700} height={500} className="object-contain h-full" />
+                </SwiperSlide>
+              ))}
+              <WorkSliderBtns 
+                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                iconStyles="text-2xl"
               />
             </Swiper>
           </div>

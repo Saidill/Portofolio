@@ -3,12 +3,12 @@
 import { motion } from "framer-motion";
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper as SwiperInstance } from "swiper"; // Import tipe Swiper
 import "swiper/css";
-import { BsArrowRight, BsGithub } from "react-icons/bs";
+import { BsGithub } from "react-icons/bs";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import Link from "next/link";
 import Image from "next/image";
-import { Description } from "@radix-ui/react-dialog";
 import WorkSliderBtns from "@/components/WorkSliderBtns";
 
 const projects = [
@@ -44,16 +44,14 @@ const projects = [
 const Work = () => {
   const [project, setProject] = useState(projects[0]);
 
-  const handleSlideChange = (swiper) => {
+  const handleSlideChange = (swiper: SwiperInstance) => {
     setProject(projects[swiper.activeIndex]);
   };
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
-      animate={{ opacity: 1, 
-        transition:{delay:2.4,duration:0.4,ease:"easeIn"}
-      }}
+      animate={{ opacity: 1, transition: { delay: 2.4, duration: 0.4, ease: "easeIn" } }}
       className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0"
     >
       <div className="container mx-auto">
@@ -66,9 +64,9 @@ const Work = () => {
               <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.title}</h2>
               <p className="text-white/60">{project.description}</p>
               <ul className="flex gap-4">
-                {project.stack.map((item, index) => {
-                  return <li key={index} className="text-xl text-accent">{item.name}</li>
-                })}
+                {project.stack.map((item, index) => (
+                  <li key={index} className="text-xl text-accent">{item.name}</li>
+                ))}
               </ul>
               <div className="border border-white/60"></div>
               <div>

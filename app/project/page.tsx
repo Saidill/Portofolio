@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Swiper as SwiperInstance } from "swiper"; // Import tipe Swiper
 import "swiper/css";
-import { BsGithub } from "react-icons/bs";
+import { BsArrowRight, BsArrowUpRight, BsGithub } from "react-icons/bs";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import Link from "next/link";
 import Image from "next/image";
@@ -14,30 +14,53 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    category: "Frontend",
-    title: "AUTOMACH",
-    description: "AutoMach is a website project for the final assignment of the web programming 1 course. The website is an e-commerce platform focused on automotive products.",
-    stack: [{ name: "Html 5" }, { name: "Css" }, { name: "PHP" }, { name: "Javascript" }],
-    image: '/assets/project1.png',
-    github: "https://github.com/saidil25/AutoMach"
+    category: "Machine Learning",
+    title: "Handlips",
+    description: "HandLips is a sign language translation project that utilizes three machine learning components: computer vision, natural language processing, and voice recognition.",
+    stack: [{ name: "Tensorflow" }, { name: "Python" }, { name: "MobileNetV2" }],
+    image: '/assets/handlips.png',
+    live: '',
+    github: "https://github.com/HandLips"
   },
   {
     num: "02",
-    category: "Frontend",
-    title: "Simlab BPJK Dashboard",
-    description: "The website application is developed for the Construction Services Development Agency. It is designed to facilitate the BPJK in receiving construction testing orders.",
-    stack: [{ name: "Tailwind.css" }, { name: "PHP" }, { name: "Javascript" }, { name: "Laravel" }],
-    image: '/assets/project2.png',
-    github: ""
-  },
-  {
-    num: "03",
     category: "Frontend",
     title: "ATHA MABEL",
     description: "A website project from a wood furniture shop for a company profile. A website to introduce company to a customer.",
     stack: [{ name: "Tailwind.css" }, { name: "Laravel" }, { name: "Javascript" }],
     image: '/assets/project3.png',
-    github: "https://github.com/saidil25/PAD2_COMPRO"
+    live: 'https://athamebel.kahasolusi.com/',
+    github: "https://github.com/Saidill/PAD2_COMPRO"
+  },
+  {
+    num: "03",
+    category: "Frontend",
+    title: "AUTOMACH",
+    description: "AutoMach is a website project for the final assignment of the web programming 1 course. The website is an e-commerce platform focused on automotive products.",
+    stack: [{ name: "Html 5" }, { name: "Css" }, { name: "PHP" }, { name: "Javascript" }],
+    image: '/assets/project1.png',
+    live: '',
+    github: "https://github.com/Saidill/AutoMach"
+  },
+  {
+    num: "04",
+    category: "Machine Learning",
+    title: "Deteksi Padi",
+    description: "Developed a machine learning model using Computer Vision to detect diseases in rice plants",
+    stack: [{ name: "Python" }, { name: "Tensorflow" }],
+    image: '/assets/padi.png',
+    live: '',
+    github: "https://github.com/Saidill/deteksi_padi_ml"
+  },
+  {
+    num: "05",
+    category: "Frontend",
+    title: "Simlab BPJK Dashboard",
+    description: "The website application is developed for the Construction Services Development Agency. It is designed to facilitate the BPJK in receiving construction testing orders.",
+    stack: [{ name: "Tailwind.css" }, { name: "PHP" }, { name: "Javascript" }, { name: "Laravel" }],
+    image: '/assets/project2.png',
+    live: '',
+    github: ""
   },
 ];
 
@@ -69,7 +92,19 @@ const Work = () => {
                 ))}
               </ul>
               <div className="border border-white/60"></div>
-              <div>
+              <div className="flex items-center gap-4">
+                <Link href={project.live}>
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
+                        <BsArrowUpRight className="text-white text-3xl group-hover:text-accent" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p>View on live</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </Link>
                 <Link href={project.github}>
                   <TooltipProvider>
                     <Tooltip>

@@ -14,9 +14,7 @@ const Home = () => {
               Hello I'm <br/> <span className="text-accent">Saidil Halim</span>
             </h1><br/>
             <p className="max-w-[500px] mb-9 text-white/80 xl:text-justify text-[14px]">
-            I am a Software Engineering Technology student at Gadjah Mada University with a passion for exploring new technological advancements. My recent
-  focus has been on machine learning, where I am driven by its transformative potential to solve complex problems and create intelligent systems.
-Additionally, I excel as a Frontend Engineer, leveraging my skills to design intuitive and dynamic user experiences in various projects.
+            I am a Software Engineering Technology student at Gadjah Mada University with a strong focus on machine learning and frontend development. I am passionate about exploring the transformative potential of machine learning to solve complex problems and develop intelligent systems. Simultaneously, I leverage my expertise as a Frontend Engineer to design intuitive and dynamic user experiences, delivering impactful solutions in my projects.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Button
@@ -24,7 +22,7 @@ Additionally, I excel as a Frontend Engineer, leveraging my skills to design int
               size="lg"
               className="uppercase flex items-center gap-2 hover:text-primary"
               >
-                <a href="/assets/Saidil Halim-resume.pdf" download={""}>Download CV</a>
+                <a href="/assets/CV-Saidil Halim.pdf" download={""}>Download CV</a>
                 <FiDownload className="text-xl"/>
               </Button>
               <div className="mb-8 xl:mb-0">
